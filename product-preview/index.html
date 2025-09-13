@@ -3,55 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
     <title>Product preview</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 
-      * {
-        padding: 0;
-        margin: 0;
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              green500: "hsl(158, 36%, 37%)",
+              green700: "hsl(158, 42%, 18%)",
+              black: "hsl(212, 21%, 14%)",
+              grey: "hsl(228, 12%, 48%)",
+              cream: "hsl(30, 38%, 92%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              fraunces: ["Fraunces", "serif"],
+            }
+          }
+        }
       }
-
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background-color: hsl(30, 38%, 92%);
-      }
-
-      .principal-card {
-        display: flex;
-        max-width: 600px;
-      }
-
-      .principal-card img {
-        width: 50%;
-      }
-
-      .card-text {
-        width: 50%;
-        background-color: hsl(0, 0%, 100%);
-      }
-    </style>
+    </script>
+    
   </head>
   <body>
     <section class="principal-card">
       <img src="./images/image-product-desktop.jpg" alt="produto" />
 
-      <section class="card-text">
+      <section class="text-green500 bg-black500">
         <p>Perfume</p>
 
         <h1>Gabrielle Essence Eau De Parfum</h1>
@@ -61,7 +46,7 @@
           Polge, Perfumer-Creator for the House of CHANEL.
         </p>
 
-        <p>$149.99<del>$169.99</del></p>
+        <p class="text-blue-500">$149.99<del>$169.99</del></p>
 
         <button>
           <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg">
